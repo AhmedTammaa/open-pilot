@@ -1,71 +1,84 @@
-# open-pilot README
 
-This is the README for your extension "open-pilot". After writing up a brief description, we recommend including the following sections.
+# **Open-Pilot**
 
-## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Open-Pilot is a VS Code extension designed to bring the power of AI to your development workflow. By leveraging local AI models with [Ollama](https://github.com/jmorganca/ollama), Open-Pilot democratizes AI, promoting open-source values and privacy-first coding assistance.
 
 ---
 
-## Following extension guidelines
+## **Features**
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+- **AI-Powered Code Suggestions**  
+  Get real-time, context-aware code suggestions as you type, powered by locally hosted AI models like CodeLlama or LLaMA 2.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+- **Code Explanation**  
+  Highlight any piece of code and let Open-Pilot explain what it does in plain English.
 
-## Working with Markdown
+- **Refactoring Assistance**  
+  Automatically refactor your code for better readability and performance.
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+- **Customizable Prompts**  
+  Tailor AI responses by adjusting prompts to match your specific needs.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+---
 
-## For more information
+## **Requirements**
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+To use Open-Pilot, ensure the following prerequisites are met:
 
-**Enjoy!**
+1. **Node.js (v18 or higher)**  
+   Install from [Node.js official site](https://nodejs.org/).
+2. **Ollama (for AI Model Serving)**  
+   Install Ollama by following the instructions in their [GitHub repository](https://github.com/jmorganca/ollama#installation).
+3. **Supported AI Models**  
+   Download models such as `CodeLlama` or `LLaMA 2` via Ollama:
+   ```bash
+   ollama pull codellama
+   ```
+
+---
+
+## **Extension Settings**
+
+Open-Pilot provides the following customizable settings:
+
+- `openPilot.enable`: Enable or disable the extension.  
+- `openPilot.model`: Specify the AI model to use (e.g., `codellama`).  
+- `openPilot.apiUrl`: Set the Ollama server's API URL (default: `http://localhost:11411`).  
+- `openPilot.maxTokens`: Define the maximum token limit for responses.  
+
+---
+
+## **Usage Instructions**
+
+1. **Start the Ollama Server**  
+   Run the following command to start Ollama:  
+   ```bash
+   ollama serve
+   ```
+
+2. **Use Open-Pilot Features**  
+   - Highlight code and run the command `Open-Pilot: Explain Code` from the Command Palette (`Ctrl+Shift+P` / `Cmd+Shift+P`).  
+   - Start typing in your editor to receive AI suggestions.  
+
+---
+
+## **Known Issues**
+
+- **Performance on Large Projects**  
+  Response times may be slower for very large files or complex prompts.  
+- **Compatibility with Older Node.js Versions**  
+  Ensure you're using Node.js v18 or later for optimal performance.
+
+---
+
+## **Contributing**
+
+We welcome contributions from the community! If you’d like to contribute to Open-Pilot, please fork the repository, make your changes, and submit a pull request.  
+
+## **For More Information**
+
+- [Visual Studio Code Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)  
+- [Markdown Syntax Reference](https://www.markdownguide.org/basic-syntax/)  
+- [Ollama GitHub Repository](https://github.com/jmorganca/ollama)  
+
+The project is initiated on 22nd of Jan, 2025. It is not user-ready yet.
